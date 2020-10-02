@@ -1,0 +1,22 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { AtualizarClienteComponent } from './atualizar-cliente/atualizar-cliente.component';
+import { CriarClienteComponent } from './criar-cliente/criar-cliente.component';
+import { DetalharClienteComponent } from './detalhar-cliente/detalhar-cliente.component';
+import { ListarClienteComponent } from './listar-cliente/listar-cliente.component';
+
+
+const routes: Routes = [
+  { path: '', redirectTo: 'employee', pathMatch: 'full' },
+  { path: 'employees', component: ListarClienteComponent },
+  { path: 'add', component: CriarClienteComponent },
+  { path: 'update/:id', component: AtualizarClienteComponent },
+  { path: 'details/:id', component: DetalharClienteComponent },
+];
+
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
