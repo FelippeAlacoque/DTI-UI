@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { Cliente } from '../cliente';
 import { ClienteService } from '../cliente.service';
 
@@ -11,7 +12,7 @@ import { ClienteService } from '../cliente.service';
 export class AtualizarClienteComponent implements OnInit {
 
   id: number;
-  cliente: Cliente = new Cliente();
+  cliente: Cliente;
 
   constructor(private route: ActivatedRoute,private router: Router,
               private clienteService: ClienteService) { }
